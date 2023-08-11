@@ -23,7 +23,7 @@ export default class MathCalc extends Character {
 
   get attack() {
     let attack = this.xattack * ((11 - this.distance) / 10);
-    if (this.stoned) {
+    if (this.xstoned) {
       attack -= Math.log2(this.distance) * 5;
     }
     return (attack > 0) ? Math.round(attack) : 0;
